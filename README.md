@@ -1,10 +1,13 @@
 # Учебный шаблон проекта Portfolio
-
+```sh
+Студентка: Барсукова Анастасия Эдуардовна
+Курс: Продвинутый веб (17.12.2018 - 26.01.2019)
+```
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/)
 
 ##  Чтобы развернуть проект необходимо:
 ```sh
-$ git clone git@github.com:loftschool/advanced-boilerplate.git
+$ git clone git@github.com:ananastea/portfolio-website.git
 $ cd advanced-boilerplate
 $ npm install
 ```
