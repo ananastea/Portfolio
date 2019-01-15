@@ -1,0 +1,28 @@
+// hero section
+
+section.hero__container
+  .hero
+    .hero__bg.js_hero__bg
+    .hero__socials
+      ul.socials__list
+        -
+          var socials = [
+            { name: 'vk', href: 'https://vk.com/id193959126'},
+            { name: 'github', href: 'https://github.com/ananastea'},
+            { name: 'in', href: 'https://www.linkedin.com/'}
+          ]
+
+        each item in socials
+          li.socials__item
+            a(href=`${item.href}`).socials__link
+              +icon(`${item.name}`, 'social__img')
+    .hero__menu
+      .burger-btn#js_menuBtn
+        .burger-btn__elem
+    .hero__title.js_hero__title
+      +icon('portfolio_header', 'hero__pic')
+    .hero__content.js_hero__content
+      +user('Барсукова Анастасия', 'user__title', 'Личный сайт веб разработчика', 'user__desc')
+    .hero__arrow-down.arrow__container.arrow__container--down
+      +icon('arrow_down', 'arrow-down__pic' )
+
