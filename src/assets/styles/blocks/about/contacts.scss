@@ -1,0 +1,89 @@
+.contacts {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template:
+    'map' 100vh
+  / 100%;
+
+  @include phones {
+    grid-template:
+      'contacts' min-content
+      'map' 100vh
+    / 100%;
+  }
+}
+
+.contacts__map-container {
+  grid-area: map;
+  z-index: -1;
+}
+
+.contacts__block {
+  align-self: center;
+  justify-self: center;
+  grid-area: map;
+  background-color: #fff;
+  opacity: .85;
+  border-radius: 5px;
+  padding: 35px 40px;
+
+  @include phones {
+    grid-area: contacts;
+    padding: 30px 10px 0 10px;
+    width: 100%;
+  }
+}
+
+.contacts__title {
+  margin-bottom: 39px;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__list {
+  margin-right: auto;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 23px;
+  cursor: pointer;
+  line-height: 25px;
+  transition: all .3s;
+}
+
+.contacts__link {
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .8;
+  transition: all .3s;
+}
+
+.contacts__img {
+  width: 24px;
+  height: 24px;
+  fill: $main;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.contacts__text {
+  font-family: 'Roboto-Medium';
+  font-size: 16px;
+  color: $text-color;
+  text-decoration: none;
+  background-image: linear-gradient(rgba($text-color, .8), rgba($text-color, .8));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+
+  &:hover {
+    background-size: 100% 2px;
+  }
+}

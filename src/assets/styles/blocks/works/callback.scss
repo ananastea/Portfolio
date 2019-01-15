@@ -1,0 +1,80 @@
+.callback {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding-top: 20px;
+  width: 380px;
+
+  @include phones {
+    width: 300px;
+    margin-top: 20px;
+  }
+}
+
+.callback__title {
+  margin-bottom: 30px;
+}
+
+.callback__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.callback__form-items {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.callback__input {
+  transition: all .3s;
+  display: flex;
+  height: 45px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  color: $dark-grey;
+
+  &::placeholder {
+    color: rgba($dark-grey, .5);
+  }
+
+  &:focus {
+    border-color: $secondary;
+  }
+}
+.callback__text {
+  padding-top: 15px;
+  height: 140px;
+  resize: none;
+}
+
+.callback__buttons {
+  display: flex;
+  width: 100%;
+}
+
+.callback__btn {
+  background-color: rgba($main, .3);
+  font-family: 'Roboto-Medium';
+  color: white;
+  width: 100%;
+  line-height: 45px;
+  border-right: 2px solid rgba(white, .5);
+  transition: all .3s;
+
+  &:first-child {
+    border-bottom-left-radius: 5px;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: 5px;
+    border-right: none;
+  }
+
+  &:hover {
+    background-color: rgba($main, 1)
+  }
+}

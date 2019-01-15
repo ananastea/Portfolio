@@ -1,0 +1,57 @@
+
+
+.welcome__container {
+  display: grid;
+  grid-template:
+    "welcome-t" max-content
+    "welcome-c" 3fr
+    "welcome-b" 1fr
+   / 100%;
+  height: 100vh;
+
+  @include phones {
+    grid-template:
+      "welcome-t" max-content
+      "welcome-c" 3fr
+      "welcome-b" 10%
+      / 100%;
+  }
+}
+
+.welcome__top {
+  grid-area: welcome-t;
+  align-items: end;
+}
+
+.welcome__btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: calc(33 * 100 / 1200)%;
+  margin-right: calc(100 * 100 / 1200)%;
+}
+
+.welcome__content {
+  grid-area: welcome-c;
+}
+
+.welcome__bot {
+  grid-area: welcome-b;
+}
+
+.welcome__copyright {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 20px;
+  z-index: 10;
+
+  @include phones {
+    flex-direction: column;
+
+    .copyright__name {
+      padding-bottom: 5px;
+    }
+  }
+}

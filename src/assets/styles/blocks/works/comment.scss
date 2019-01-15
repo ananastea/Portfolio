@@ -1,0 +1,53 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  height: 100%;
+  margin: 0 20px;
+}
+
+.comment__quotes {
+  font-family: "FontAwesome";
+  font-size: 36px;
+  color: rgba($dark-grey, .2);
+  margin-bottom: 10px;
+
+  &:before {
+    content: '\f10d';
+  }
+
+
+  @include phones {
+    text-align: center;
+  }
+}
+
+.comment__text {
+  margin-bottom: 27px;
+}
+
+.comment__user {
+  display: flex;
+  align-items: center;
+
+  margin-top: auto;
+}
+
+.comment__user-desc {
+  display: flex;
+  flex-direction: column;
+  color: $main;
+  line-height: 24px;
+}
+
+.comment__img-wrap {
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 22px;
+}
+
+.comment__name {
+  font-family: 'Roboto-Bold';
+}

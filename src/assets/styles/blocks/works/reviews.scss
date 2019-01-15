@@ -1,0 +1,89 @@
+.reviews__container {
+  background: url(./assets/images/bg/bg-review.png) center center / cover no-repeat;
+  display: grid;
+  grid-template:
+    'title title' auto
+    'comment-l comment-r' auto
+    'callback callback' 100vh
+  / 50% 50%;
+
+  @include phones {
+    grid-template:
+      'title' auto
+      'comment-l' auto
+      'comment-r' auto
+      'callback' auto
+      / 100% ;
+  }
+}
+
+.reviews__top {
+  grid-area: title;
+}
+
+.reviews__bot {
+  grid-area: callback;
+  display: flex;
+}
+
+.reviews__title {
+  grid-area: title;
+  position: relative;
+  margin: 68px 0;
+
+  .title__pic{
+    height: 179px;
+  }
+
+  .title {
+    line-height: 1;
+  }
+
+  @include phones {
+    margin: 40px 0 20px 0;
+  }
+}
+
+.reviews__title-text {
+  line-height: 1;
+}
+
+.reviews__item {
+
+  &--left{
+    grid-area: comment-l;
+    justify-self: end;
+
+    @include phones {
+      justify-self: initial;
+    }
+  }
+  &--right{
+    grid-area: comment-r;
+  }
+}
+
+.reviews__bot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets {
+    justify-content: space-around;
+  }
+}
+
+.reviews__arrow-container {
+  display: none;
+  margin-bottom: 40%;
+
+  @include tablets {
+    display: block;
+  }
+  @include phones {
+    margin-top: 15%;
+    margin-bottom: 80%;
+  }
+}

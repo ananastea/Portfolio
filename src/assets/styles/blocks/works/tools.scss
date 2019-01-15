@@ -1,0 +1,76 @@
+.tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+  height: 100%;
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.tools__title {
+  margin-bottom: 37px;
+
+  @include tablets {
+    width: 200%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  @include phones {
+    width: 95%;
+  }
+}
+
+.tools__list {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: $main;
+  line-height: 50px;
+  border-top: 2px solid rgba($secondary, .3);
+  border-bottom: 2px solid rgba($secondary, .3);
+  margin-bottom: 39px;
+
+
+  @include tablets {
+    margin-bottom: 20px;
+  }
+}
+
+.tools__btn {
+  display: flex;
+  align-items: center;
+  width: 199px;
+  height: 46px;
+  background-color: $main;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s;
+
+  &:hover {
+    background-color: $secondary;
+  }
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.tools__btn-text {
+  color: white;
+  line-height: 46px;
+  text-decoration: none;
+}
+
+.tools__btn-pic {
+  width: 20px;
+  height: 19px;
+  margin: 0 11px;
+  fill: white;
+}
