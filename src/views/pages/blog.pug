@@ -1,44 +1,19 @@
 extends ../main.layout.pug
 
 block variables
-  - var title = 'Блог'
+  - var title = 'blog'
 
 block content
-  .blog__container
-    section.hero__container
-      .hero.hero--blog
-        .hero__bg.js_hero__bg
-        .hero__socials
-          ul.socials__list
-            -
-              var socials = [
-              { name: 'vk', href: 'https://vk.com/id193959126'},
-              { name: 'github', href: 'https://github.com/ananastea'},
-              { name: 'in', href: 'https://www.linkedin.com/'}
-              ]
-
-            each item in socials
-              li.socials__item
-                a(href=`${item.href}`).socials__link
-                  +icon(`${item.name}`, 'social__img')
-        .hero__menu
-          .burger-btn#js_menuBtn
-            .burger-btn__elem
-        .hero__title.hero__title--blog.js_hero__title
-          +icon('blog_header', 'hero__pic hero__pic--blog')
-        .hero__content.js_hero__content
-          +user('Блог', 'title title--color-white', 'Статьи, которые я написал', 'user__desc')
-
-
+  main.blog__container
     .blog__content
       .blog__triangle.triangle__container
         .triangle.triangle--left.triangle--blog
-          svg(viewBox="0 0 1200 300" preserveAspectRatio="none").triangle-pic.triangle-pic--blog
-            polygon(points='0,0 0,300 1200,300 1200,280')
+          svg(viewBox="0 0 1000 185" preserveAspectRatio="none").triangle-pic.triangle-pic--blog
+            polygon(points='0,0 0,185 1000,185 1000,175')
         .triangle.triangle--right.triangle--blog
-          svg(viewBox="0 0 1200 300" preserveAspectRatio="none").triangle-pic.triangle-pic--blog
-            polygon(points='1200,50 1200,300 0,300 0,280')
-      include ../blocks/articles
+          svg(viewBox="0 0 1000 185" preserveAspectRatio="none").triangle-pic.triangle-pic--blog
+            polygon(points='0,185 1000,185 1000,0 0,175')
+      #articles-component
 
 
 block scripts
