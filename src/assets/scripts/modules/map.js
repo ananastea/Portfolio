@@ -195,4 +195,4 @@
     streetViewControl: false,
     fullscreenControl: false,
   });
-})();
+})(); 
