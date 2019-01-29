@@ -41,7 +41,6 @@
   }
 
   @include tablets {
-    //width: 50%;
     margin: 0 auto;
   }
 
@@ -109,8 +108,4 @@
   margin-bottom: 20px;
   width: 95%;
 
-  //
-  //@include tablets {
-  //  width: 50%;
-  //}
 }
