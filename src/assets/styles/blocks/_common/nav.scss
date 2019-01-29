@@ -11,7 +11,9 @@
   left: 0;
   bottom: 0;
   display: flex;
+  height: 100vh;
   justify-content: center;
+  align-items: center;
   z-index: -999;
 
   &:before,
@@ -92,10 +94,6 @@
     &:last-child {
       margin-bottom: 0;
     }
-
-    &:first-child {
-      margin-top: 111px;
-    }
   }
 
   &--profile {
@@ -119,9 +117,12 @@
       margin-right: 0;
       padding: 14px 31px;
 
+      @include tablets {
+        padding: 14px 30px;
+      }
 
       @include phones {
-        padding: 14px 23px;
+        padding: 14px 24.5px;
       }
     }
   }
@@ -154,8 +155,6 @@
     margin-right: 0;
   }
 }
-
-//class for body if menu active
 
 .noscroll {
   overflow: hidden;
