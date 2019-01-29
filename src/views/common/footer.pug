@@ -1,18 +1,21 @@
-//footer
-
 block variables
+-
+  var links = [
+  { name: 'Мои работы', href: 'works'},
+  { name: 'Обо мне', href: 'about'},
+  { name: 'Блог', href: 'blog'},
+  { name: 'Авторизация', href: 'index'}
+  ]
+  var socials = [
+  { name: 'vk', href: 'https://vk.com/id193959126'},
+  { name: 'github', href: 'https://github.com/ananastea'},
+  { name: 'in', href: 'https://www.linkedin.com/'}
+  ]
 
 footer.footer
   .footer__row
     .footer__col.footer__col--left
       .footer__nav
-        -
-          var links = [
-          { name: 'Мои работы', href: 'works'},
-          { name: 'Обо мне', href: 'about'},
-          { name: 'Блог', href: 'blog'},
-          { name: 'Авторизация', href: 'index'}
-          ]
         nav.nav
           ul.nav__list
             each link in links
@@ -22,16 +25,11 @@ footer.footer
     .footer__col.footer__col--right
       .footer__socials
         ul.socials__list
-          -
-            var socials = [
-            { name: 'vk', href: 'https://vk.com/id193959126'},
-            { name: 'github', href: 'https://github.com/ananastea'},
-            { name: 'in', href: 'https://www.linkedin.com/'}
-            ]
           each item in socials
             li.socials__item
               a(href=`${item.href}`).socials__link.socials__link--footer
                 +icon(`${item.name}`, 'social__img--footer social__img')
+
   .footer__row
     .footer__col.footer__col--left
       p.footer__text
@@ -41,3 +39,4 @@ footer.footer
     .footer__col.footer__col--right
       .footer__copyright
         p.copyright.footer__text © Барсукова Анастасия | создано с любовью в LoftSchool | 2019
+
